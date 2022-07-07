@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/*-------------------------------------------
+ベーススタイル
+-------------------------------------------*/
+
+body{
+font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+font-size: 15px;
+line-height: 1.5;
+color: #333;
+}
+label, input, textarea, select, button{
+    cursor: pointer;
+}
+button{
+    border: 0;
+}
+button.button-submission{
+    background-color: #92d3ca;
+}
+
+/*-------------------------------------------
+写真の配置スタイル
+-------------------------------------------*/
+
+.grid {
+    margin: 100px 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item{
+    list-style: none;
+}
+.drid-col-2 >.grid-item{
+    width: 50%;
+}
+.drid-col-3 >.grid-item{
+    width: 33.3%;
+}
+.drid-col-4 >.grid-item{
+    width: 25%;
+}
+
+/*-------------------------------------------
+セクション
+-------------------------------------------*/
+
+.section{
+padding: 50px 15px;
+}
+.section.section-secondary{
+background: #efefef;
+}
+.section-headline{
+text-align: center;
+font-size: 40px;
+font-weight: bold;
+margin-bottom: 100px;
+}
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.header-logo{
+    margin: 0;
+    margin-top: 15px;
+}
+.header-logo > a{
+    display: block;
+    color: #333;
+}
+/* .header-nav{} */
+.header-nevlist{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .header-navitem{} */
+.header-navitem > a{
+    font-size: 20px;
+    display: block;
+    padding: 20px 30px 10px 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color .25;
+}
+.header-navitem > a:hover{
+    border-bottom: 2px solid #ccc;
+}
+
+/*-------------------------------------------
+メイン動画
+-------------------------------------------*/
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.hero-caption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-caption > strong{
+    padding-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+.hero > video{
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 105%;
+}
+
+/*-------------------------------------------
+プロフィール
+-------------------------------------------*/
+
+.about {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.about-image{
+    /* border-radius: 50%; */
+    /* overflow: hidden; */
+    background-color: #eee;
+}
+.about-caption {
+    padding-left: 15px;
+}
+.about-caption p{
+    font-size: 18px;
+}
+.about-headline{    
+    margin: 0 0 20px;
+    font-size: 30px;
+    float: left;
+}
+
+
+/*-------------------------------------------
+インスタグラムアイコン表示
+-------------------------------------------*/
+
+.insta_btn {
+    display: inline-block;
+    text-align: center;/*中央揃え*/
+    color: #2e6ca5;/*文字色*/
+    font-size: 20px;/*文字サイズ*/
+    padding:0px 20px 0px 20px;
+    text-decoration: none;/*下線消す*/
+    display: flex;
+  }
+  .insta_btn p {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 15px;
+}
+  
+  .insta_btn:hover {/*ホバー時*/
+    color:#668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+  }
+  
+  .insta_btn .insta{/*アイコンの背景*/
+    position: relative;/*相対配置*/
+    display: inline-block;
+    width: 50px;/*幅*/
+    height: 50px;/*高さ*/
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+    overflow: hidden;/*はみ出た部分を隠す*/
+    border-radius: 13px;/*角丸に*/
+  
+  }
+  
+  .insta_btn .insta:before{/*グラデーションを重ねるため*/
+    content: '';
+    position: absolute;/*絶対配置*/
+    top: 23px;/*ずらす*/
+    left: -18px;/*ずらす*/
+    width: 60px;/*グラデーションカバーの幅*/
+    height: 60px;/*グラデーションカバーの高さ*/
+    background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+    background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+  }
+  
+  .insta_btn .fa-instagram {/*アイコン*/
+    color: #FFF;/*白に*/
+    position: relative;/*z-indexを使うため*/
+    z-index: 2;/*グラデーションより前に*/
+    font-size: 35px;/*アイコンサイズ*/
+    line-height: 50px;/*高さと合わせる*/
+  }
+
+/*-------------------------------------------
+子犬情報
+-------------------------------------------*/
+
+.card{
+    padding: 0 10px;
+}
+.card-link{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: background-color .25s;
+}
+.card-link:hover{
+    background-color: #eee;
+}
+.card-label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #999;
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.card-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.card-info{
+    padding: 5px 10px;
+}
+/* .time-card{} */
+.card-headline{
+    margin: 0;
+}
+.card-description{
+    margin: 0;
+}
+
+/*-------------------------------------------
+子犬情報アメブロアイコン
+-------------------------------------------*/
+
+.avator{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+}
+.avator-name{
+    font-weight: bold;
+    padding-left: 15px;
+}
+.avator-image{
+    margin: 0;
+}
+
+/*-------------------------------------------
+Page Topボタン
+-------------------------------------------*/
+
+.section-button{
+    margin-top: 40px;
+    text-align: center;
+}
+.button{
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    background-color: #333;
+    text-align: center;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0 #bbb;
+    transition: box-shadow .25s;
+}
+.button:hover{
+    box-shadow: 0 0 0 #bbb;
+
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+
+.footer{
+    height: auto;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.footer p{
+    margin: 10px;
+}
+.footer-headline{
+    padding-top: 20px;
+    font-size: 20px;
+}
+.footer-discription{
+    font-style: 10px;
+    display: inline-block;
+    text-align: left;
+}
+.footer-line{
+    margin-bottom: 10px;
+}
+.footer-tel{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    transition: background-color .25s;
+}
+.footer-tel:hover{
+    background-color: #999;
+}
+.footer-mail{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    transition: background-color .25s;
+}
+.footer-mail:hover{
+    background-color: #999;
+}
+
+.footer-copy{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
